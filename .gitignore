@@ -1,24 +1,33 @@
-texto = input('Escreva o texto a ser criptografado ou decifrado:')
-modo = input('Escolha entre C para criptografar e D para decifrar ')
+texto = input('Escreva o texto:')
 Alfabeto = 'abcdefghijklmnopqrstuvwyzàáãâéêóôõíúçABCDEFGHIJKLMNOPQRSTUVWYZÀÁÃÂÉÊÓÕÍÚÇ'
-ROT = 13 
-def encrypt(texto) :
-    m = ''
-    for c in texto:
-        if c in Alfabeto:
-             c_index = Alfabeto.index(c)
-             m += Alfabeto[(c_index + ROT) % len(Alfabeto)]
-        else:
+ROT = 13
+m = ''
+empresa = ''
+
+
+
+for c in texto:
+    if c in Alfabeto:
+        c_index = Alfabeto.index(c)
+        m += Alfabeto[(c_index + ROT) % len(Alfabeto)]
+    else:
             m += c 
-    return m        
-  
-def decrypt(texto) :
-    m = ''
-    for c in texto:
-        c_index =Alfabeto.index(c)
-        m += Alfabeto[(c_index - ROT) % len(Alfabeto)]
-    return m      
+return m       
+
+empresa = input('vocé é da empresa: Sim(S) ou Não(N)')
+if empresa == S:
+    print(ROT)
+else:
+    print('voce não tem acesso a chave')
+    break
+
     
+    
+
+    
+
+    
+        
         
 
 
@@ -29,4 +38,6 @@ elif modo == 'd':
     print (decrypt(texto))    
 else:
     print('Esse comando não existe.')
+        
+
         
