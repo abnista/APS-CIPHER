@@ -3,41 +3,56 @@ Alfabeto = 'abcdefghijklmnopqrstuvwyzàáãâéêóôõíúçABCDEFGHIJKLMNOPQRS
 ROT = 13
 m = ''
 empresa = ''
-
-
-
+Chave =''
+cod = 2299456
+equipamentos=''
+M=''
 for c in texto:
     if c in Alfabeto:
         c_index = Alfabeto.index(c)
         m += Alfabeto[(c_index + ROT) % len(Alfabeto)]
     else:
             m += c 
-return m       
+for c in texto:
+    if c in Alfabeto:
+        c_index = Alfabeto.index(c)
+        M += Alfabeto[(c_index - ROT) % len(Alfabeto)]
+    else:
+            m += c       
 
-empresa = input('vocé é da empresa: Sim(S) ou Não(N)')
-if empresa == S:
-    print(ROT)
+empresa = input('vocé é um inspetor? Sim(S) Não(N)')
+if   empresa == ('S'):
+    print('A rotação e essa :', ROT)
 else:
-    print('voce não tem acesso a chave')
-    break
-
-    
-    
-
-    
-
-    
-        
-        
-
-
-
-if modo == 'c':
-    print (encrypt(texto))
-elif modo == 'd':
-    print (decrypt(texto))    
+    print('voce não tem acesso a rotação')
+Chave = input('Insira a rotação:')
+if Chave == (ROT):
+    print('A chave e:', Chave )
+Chave  = input('Insira a chave :')
+if Chave == (Chave)   :
+    print ('A chave esta correta, o codigo é:', m )
+else :
+    print('A chave esta incorreta, voce nao tem acesso.')
+m = input('Insira o codigo para prosseguir:')
+if m == m: 
+    print('Prossiga para a para a proxima fase da verificação.')
+equipamentos =input('Você está com os equipamenstos necessários ?')
+if equipamentos == ('Sim'):
+    print('Bem vindo inspetor, voce vai ter acesso ao navio.')
 else:
-    print('Esse comando não existe.')
+    print('Voce nao tem acesso.')    
+
+    
+
+    
+    
+
+    
+
+    
+        
         
 
-        
+
+
+
