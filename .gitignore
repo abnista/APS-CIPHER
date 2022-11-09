@@ -36,13 +36,11 @@ else :
 m = input('Insira o codigo para prosseguir:')
 if m == m: 
     print('Prossiga para a para a proxima fase da verificação.')
-equipamentos =input('Você está com os equipamenstos necessários ?')
+equipamentos =input('Você está com os equipamentos necessários ?')
 if equipamentos == ('Sim'):
-    print('Bem vindo inspetor, voce vai ter acesso ao navio.')
+    print('Bem vindo inspetor, voce vai ter acesso ao navio, sobre tutela da defesa contra perigos químicos do Brasil.')
 else:
     print('Voce nao tem acesso.')    
-
-    
 
     
     
